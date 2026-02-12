@@ -1,21 +1,5 @@
 /**
- * contact.js – EmailJS contact form integration.
- *
- * ─────────────────────────────────────────────
- *  SETUP INSTRUCTIONS
- * ─────────────────────────────────────────────
- *  1. Create a free account at https://www.emailjs.com
- *  2. Add an Email Service (Gmail, Outlook, etc.)
- *  3. Create an Email Template with these variables:
- *       {{from_name}}  – sender's name
- *       {{from_email}} – sender's email
- *       {{subject}}    – message subject
- *       {{message}}    – message body
- *  4. Replace the three placeholder values below:
- *       EMAILJS_SERVICE_ID  → your Service ID  (e.g. "service_abc123")
- *       EMAILJS_TEMPLATE_ID → your Template ID (e.g. "template_xyz789")
- *       EMAILJS_PUBLIC_KEY  → your Public Key  (found in Account > API Keys)
- * ─────────────────────────────────────────────
+Integracion de EmailJS para el formulario
  */
 
 const EMAILJS_SERVICE_ID = "service_61xr69w";
@@ -44,12 +28,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = form.querySelector("#message").value.trim();
 
     if (!name || !email || !subject || !message) {
-      showStatus("Please fill in all fields before sending.", "error");
+      showStatus(
+        "Por favor, rellene todos los campos antes de enviar.",
+        "error",
+      );
       return;
     }
 
     if (!isValidEmail(email)) {
-      showStatus("Please enter a valid email address.", "error");
+      showStatus(
+        "Por favor, introduce una dirección de correo válida.",
+        "error",
+      );
       return;
     }
 
@@ -69,12 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
         EMAILJS_TEMPLATE_ID,
         templateParams,
       );
-      showStatus("Message sent! I'll get back to you soon 🚀", "success");
+      showStatus("¡Mensaje enviado! Te responderé pronto.", "success");
       form.reset();
     } catch (err) {
       console.error("EmailJS error:", err);
       showStatus(
-        "Something went wrong. Please try again or email me directly.",
+        "Algo salió mal. Inténtalo de nuevo o envíame un correo electrónico.",
         "error",
       );
     } finally {
@@ -100,8 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!submitBtn) return;
     submitBtn.disabled = isLoading;
     submitBtn.querySelector(".btn-text").textContent = isLoading
-      ? "Sending…"
-      : "Initialize Transmission";
+      ? "Enviando…"
+      : "Enviar mensaje";
   }
 
   function isValidEmail(email) {

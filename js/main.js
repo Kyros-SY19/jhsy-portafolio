@@ -3,6 +3,14 @@
  *            certificate modal, and general UI interactions.
  */
 
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   /* ── Mobile menu ─────────────────────────────────────────── */
   const hamburger = document.getElementById("hamburger");
