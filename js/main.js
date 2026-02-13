@@ -3,6 +3,7 @@
  *            certificate modal, and general UI interactions.
  */
 
+//Para evitar la recarga de pagina en el mismo lugar
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
