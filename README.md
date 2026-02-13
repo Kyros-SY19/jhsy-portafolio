@@ -8,7 +8,7 @@ The site is deployed on GitHub Pages and uses EmailJS for client-side form handl
 
 🚀 Live Site
 
-👉 https://YOUR_USERNAME.github.io/YOUR_REPO/
+👉 https://kyros-sy19.github.io/jhsy-portafolio/
 
 🧠 Why I Built It This Way
 
@@ -56,20 +56,52 @@ No frameworks. No bundlers. No dependencies.
 
 Project Structure 📁
 
-PORTAFOLIO/
+JH.SY-PORTAFOLIO/
 │
 ├── css/
+│ ├── base.css
+│ ├── components.css
+│ ├── layout.css
+│ ├── responsive.css
+│ ├── sections.css
 │ └── style.css
 │
 ├── images/
 │ ├── certificates/
+│ │ ├── cert-01.png
+│ │ ├── cert-02.png
+│ │ ├── cert-03.png
+│ │ ├── cert-04.png
+│ │ ├── cert-05.png
+│ │ ├── cert-06.png
+│ │ ├── cert-07.png
+│ │ ├── cert-08.png
+│ │ ├── cert-09.png
+│ │ ├── cert-10.png
+│ │ ├── cert-11.png
+│ │ ├── cert-12.png
+│ │ └── cert-13.png
+│ │
 │ └── icons/
+│ ├── api.png
+│ ├── avatar.png
+│ ├── banner.jpg
+│ ├── crud.png
+│ ├── css.png
+│ ├── favicon.png
+│ ├── git.png
+│ ├── html.png
+│ ├── js.png
+│ ├── php.png
+│ ├── pronto.png
+│ └── react.png
 │
 ├── js/
-│ ├── main.js
-│ └── contact.js
+│ ├── contact.js
+│ └── main.js
 │
 ├── index.html
+├── LICENSE
 └── README.md
 
 Contact Form (EmailJS) 📧

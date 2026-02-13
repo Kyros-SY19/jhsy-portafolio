@@ -1,7 +1,7 @@
 /**
 Integracion de EmailJS para el formulario
  */
-
+/*crear credenciales en emailJS */
 const EMAILJS_SERVICE_ID = "service_61xr69w";
 const EMAILJS_TEMPLATE_ID = "template_z2bhoug";
 const EMAILJS_PUBLIC_KEY = "uvbawl3VUYRb_zmKC";
